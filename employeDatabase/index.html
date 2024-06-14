@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="overflow-hidden m-10 font-mono">
+    <header class="flex justify-between items-center mb-10">
+      <h1 class="text-xl font-bold">Employee Database Management</h1>
+      <button class="text-xl bg-slate-200 px-6 py-3 rounded-xl createEmployee">
+        Add Employee
+      </button>
+    </header>
+    <div class="employees flex border-2 items-center p-5 text-center">
+      <div class="employees__names p-5 h-[700px] w-[30%] border-2">
+        <span class="employees__names--title mb-4 inline-block"
+          >Employee List</span
+        >
+        <div class="employees__names--list grid gap-2"></div>
+      </div>
+      <div
+        class="employees__single p-5 h-[700px] w-[70%] border-2 text-center flex flex-col items-center justify-center"
+      >
+        <div class="employees__single--title">Employee Information</div>
+        <div
+          class="employees__single--info flex items-center justify-center"
+        ></div>
+      </div>
+    </div>
+    <div class="addEmployee">
+      <form class="addEmployee_create">
+        Add a new Employee
+        <div>
+          <input
+            type="text"
+            name="firstName"
+            placeholder="First Name"
+            required
+          />
+          <input type="text" name="lastName" placeholder="Last Name" required />
+        </div>
+        <input type="text" name="imageUrl" placeholder="Image URL (Optional)" />
+        <input type="email" name="email" placeholder="Email" required />
+        <input
+          type="number"
+          name="contactNumber"
+          placeholder="Contact"
+          required
+        />
+        <input type="number" name="salary" placeholder="Salary" required />
+        <input type="text" name="address" placeholder="Address" required />
+        <input
+          type="date"
+          name="dob"
+          placeholder="Date of Birth"
+          class="addEmployee_create--dob"
+          required
+        />
+        <input
+          type="submit"
+          class="addEmployee_create--submit"
+          value="Submit"
+        />
+      </form>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
